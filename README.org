@@ -5,6 +5,6 @@ bind with.
 
 * Installation
 To install this package do the folloeing commands
-- git clone
-- cd bindpredcition
+- git clone git@github.com:ndonyapour/bindpredict.git
+- cd bindpredict
 - pip install -e .

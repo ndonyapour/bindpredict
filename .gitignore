@@ -1,0 +1,16 @@
+*~
+*.pyc
+*/__pycache__/
+.DS_Store
+*__pycache__*
+*.pkl
+*.h5
+*.log
+*.dcd
+*#*#
+*.orch
+.tox
+.eggs
+pip-wheel-metadata
+build
+dist
