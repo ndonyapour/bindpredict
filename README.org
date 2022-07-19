@@ -1,0 +1,10 @@
+* ligand bind prediction
+This project aims to develop a computational method to predict
+ which protein categories a given small molecule is most likely to
+bind with.
+
+* Installation
+To install this package do the folloeing commands
+- git clone
+- cd bindpredcition
+- pip install -e .
