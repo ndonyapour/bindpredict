@@ -3,4 +3,4 @@
 *** logP, molecualr weight, number of hydrogen bond donors, number of hydrogen bond acceptors,
 number of rotatable bonds, number of aromatic rings, the polar surface area
 ** Molecular fingerprints
-**** ECFP4, MAAC
+**** ECFP4, MACCS fingerprints

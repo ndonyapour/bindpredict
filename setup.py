@@ -40,7 +40,7 @@ setup(
         'numpy',
         'scipy',
         'scikit-learn',
-        'pytorch',
+        'torch',
         'rdkit'
     ],
 )
