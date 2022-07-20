@@ -4,12 +4,14 @@ This project aims to develop a computational method to predict
 bind with.
 
 * Installation
-Fisrt you need to use conda to make a new virtual environment using the ~env.yaml~
+First you need to use conda to make a new virtual environment using the ~env.yaml~
 #+begin_src bash
   conda env create -n myenv -f env.yaml
   conda activate myenv
 #+end_src
 Then, to install this package do the folloeing commands
+#+begin_src bash
 - git clone git@github.com:ndonyapour/bindpredict.git
 - cd bindpredict
 - pip install -e .
+#+end_src
