@@ -6,6 +6,8 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem import MACCSkeys
 from rdkit import DataStructs
+from rdkit.ML.Cluster import Butina
+from rdkit import DataStructs
 
 
 class PhysiochemicalProp(collections.abc.Mapping):
@@ -80,7 +82,6 @@ def canonize_smile(smile, canonize=True):
         warnings.warn(smile + ' can not be canonized:'
                       'nvalid SMILES string!')
 
-
     return new_smile
 
 
@@ -103,3 +104,23 @@ def smiles_to_mol(mol_smiles):
     for smiles in mol_smiles:
         mols.append(Chem.MolFromSmiles(smiles))
     return mols
+
+
+def np_to_bv(fv):
+    bv = DataStructs.ExplicitBitVect(len(fv))
+    for i, v in enumerate(fv):
+        if v:
+            bv.SetBit(i)
+    return bv
+
+
+def ClusterFps(fps, cutoff=0.2):
+    dists = []
+    nfps = len(fps)
+    for i in range(1, nfps):
+        sims = DataStructs.BulkTanimotoSimilarity(fps[i],
+                                                  fps[:i])
+        dists.extend([1 - x for x in sims])
+
+    cs = Butina.ClusterData(dists, nfps, cutoff, isDistData=True)
+    return cs
