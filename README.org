@@ -6,8 +6,8 @@ bind with.
 * Installation
 First, clone the ~bindpredict~ package
 #+begin_src bash
-- git clone git@github.com:ndonyapour/bindpredict.git
-- cd bindpredict
+git clone git@github.com:ndonyapour/bindpredict.git
+cd bindpredict
 #+end_src
 
 Then, you need to use conda to make a new virtual environment using the ~env.yaml~
@@ -15,7 +15,7 @@ Then, you need to use conda to make a new virtual environment using the ~env.yam
   conda env create -n myenv -f env.yaml
   conda activate myenv
 #+end_src
-At the end install this package do the folloeing commands
+At the end to install this package run the following command
 #+begin_src bash
-- pip install -e .
+pip install -e .
 #+end_src
