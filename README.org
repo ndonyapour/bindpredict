@@ -6,7 +6,7 @@ bind with.
 * Installation
 First, clone the ~bindpredict~ package
 #+begin_src bash
-git clone git@github.com:ndonyapour/bindpredict.git
+git clone https://github.com/ndonyapour/bindpredict.git
 cd bindpredict
 #+end_src
 
